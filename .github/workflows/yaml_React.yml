@@ -12,7 +12,7 @@ jobs:
           node-version: 12.18.2
       - name: Install React
         uses: npx create-react-app react-base-app
-      -  name: Start react
+      - name: Initiate React
         uses: npm start
       - name: Install Surge
         run: npm install -g surge
