@@ -19,4 +19,4 @@ jobs:
       - name: Install Surge
         run: npm install --global surge
       - name: Run surge
-        run: surge ./ build curved-pie.surge.sh --token ${{ secrets.TOKEN }}
+        run: surge ./ build incompetent-hose.surge.sh --token ${{ secrets.TOKEN }}
