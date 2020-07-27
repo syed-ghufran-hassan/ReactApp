@@ -10,10 +10,6 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12.18.2
-      - name: Install React
-        uses: npx create-react-app react-base-app
-      - name: Initiate React
-        uses: npm start
       - name: Install Surge
         run: npm install -g surge
       - name: Run surge
