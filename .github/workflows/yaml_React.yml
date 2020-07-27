@@ -12,5 +12,7 @@ jobs:
           node-version: 12.18.2
       - name: Install Surge
         run: npm install -g surge
+      - name: Run React
+        run: npm start
       - name: Run surge
-        run: surge ./ bootcamp_setup_ziakhan.surge.sh --token ${{ secrets.TOKEN }}
+        run: surge ./ curved-pie.surge.sh --token ${{ secrets.TOKEN }}
