@@ -16,6 +16,6 @@ jobs:
       - name: Build React
       - run: yarn build
       - name: Install Surge
-        run: npm install -g surge
+        run: npm install --global surge
       - name: Run surge
-        run: surge ./ curved-pie.surge.sh --token ${{ secrets.TOKEN }}
+        run: surge ./ build curved-pie.surge.sh --token ${{ secrets.TOKEN }}
