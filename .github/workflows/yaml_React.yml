@@ -10,9 +10,13 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12.18.2
+      - name: Install Yarn
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Build React
+      - run: yarn build
       - name: Install Surge
         run: npm install -g surge
-      - name: Run React
-        run: npm start
       - name: Run surge
         run: surge ./ curved-pie.surge.sh --token ${{ secrets.TOKEN }}
