@@ -7,15 +7,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Node.js
-        uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v2-beta
         with:
           node-version: 12.18.2
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-      - name: Build React
+        name: Build React
       - run: yarn build
-      - name: Install Surge
-        run: npm install --global surge
-      - name: Run surge
-        run: surge ./ build curved-pie.surge.sh --token ${{ secrets.TOKEN }}
+        name: Install Surge
+      - run: npm install --global surge
+        name: Run surge
+      - run: surge ./ build curved-pie.surge.sh --token ${{ secrets.TOKEN }}
